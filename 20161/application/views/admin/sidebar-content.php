@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -7,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title><?php echo $site_title; ?> </title>
+    <title><?php echo $page_title; ?> </title>
 
     <!-- Bootstrap -->
 	<link href="<?php echo base_url() . 'assets/vendors/bootstrap/dist/css/bootstrap.min.css' ?>" rel="stylesheet">
@@ -25,6 +26,12 @@
 	<link href="<?php echo base_url() . 'assets/vendors/bootstrap-daterangepicker/daterangepicker.css' ?>" rel="stylesheet">
     <!-- Custom Theme Style -->
 	<link href="<?php echo base_url() . 'assets/build/css/custom.min.css' ?>" rel="stylesheet">
+	<!-- Datatables -->
+    <link href="<?php echo base_url() . 'assets/vendors/datatables.net-bs/css/dataTables.bootstrap.min.css' ?>" rel="stylesheet">
+	<link href="<?php echo base_url() . 'assets/vendors/datatables.net-buttons-bs/css/buttons.bootstrap.min.css' ?>" rel="stylesheet">
+	<link href="<?php echo base_url() . 'assets/vendors/datatables.net-fixedheader-bs/css/fixedHeader.bootstrap.min.css' ?>" rel="stylesheet">
+	<link href="<?php echo base_url() . 'assets/vendors/datatables.net-responsive-bs/css/responsive.bootstrap.min.css' ?>" rel="stylesheet">
+    <link href="<?php echo base_url() . 'assets/vendors/datatables.net-scroller-bs/css/scroller.bootstrap.min.css' ?>" rel="stylesheet">
   </head>
 
   <body class="nav-md">
@@ -57,14 +64,14 @@
               <div class="menu_section">
                 <h3>General</h3>
                 <ul class="nav side-menu">
-                  <li><a><i class="fa fa-home"></i> Home <span class="fa fa-chevron-down"></span></a>
+                  <li><a><i class="fa fa-home"></i> <?php echo lang('Home'); ?> <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="index.html">Dashboard</a></li>
                       <li><a href="index2.html">Dashboard2</a></li>
                       <li><a href="index3.html">Dashboard3</a></li>
                     </ul>
                   </li>
-                  <li><a><i class="fa fa-edit"></i> Forms <span class="fa fa-chevron-down"></span></a>
+                  <li><a><i class="fa fa-edit"></i> <?php echo lang('Forms'); ?> <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="form.html">General Form</a></li>
                       <li><a href="form_advanced.html">Advanced Components</a></li>
@@ -74,7 +81,7 @@
                       <li><a href="form_buttons.html">Form Buttons</a></li>
                     </ul>
                   </li>
-                  <li><a><i class="fa fa-desktop"></i> UI Elements <span class="fa fa-chevron-down"></span></a>
+                  <li><a><i class="fa fa-desktop"></i> <?php echo lang('UI Elements'); ?> <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="general_elements.html">General Elements</a></li>
                       <li><a href="media_gallery.html">Media Gallery</a></li>
@@ -87,13 +94,13 @@
                       <li><a href="calendar.html">Calendar</a></li>
                     </ul>
                   </li>
-                  <li><a><i class="fa fa-table"></i> Tables <span class="fa fa-chevron-down"></span></a>
+                  <li><a><i class="fa fa-table"></i> <?php echo lang('Tables'); ?> <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="tables.html">Tables</a></li>
+                      <li><a href="<?php echo base_url().'admin/users'?>">Users</a></li>
                       <li><a href="tables_dynamic.html">Table Dynamic</a></li>
                     </ul>
                   </li>
-                  <li><a><i class="fa fa-bar-chart-o"></i> Data Presentation <span class="fa fa-chevron-down"></span></a>
+                  <li><a><i class="fa fa-bar-chart-o"></i> <?php echo lang('Data Presentation'); ?><span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="chartjs.html">Chart JS</a></li>
                       <li><a href="chartjs2.html">Chart JS2</a></li>
@@ -102,7 +109,7 @@
                       <li><a href="other_charts.html">Other Charts</a></li>
                     </ul>
                   </li>
-                  <li><a><i class="fa fa-clone"></i>Layouts <span class="fa fa-chevron-down"></span></a>
+                  <li><a><i class="fa fa-clone"></i><?php echo lang('Layouts'); ?> <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="fixed_sidebar.html">Fixed Sidebar</a></li>
                       <li><a href="fixed_footer.html">Fixed Footer</a></li>

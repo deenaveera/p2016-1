@@ -13,7 +13,7 @@ class template
 		public function load_backend_template()
 		{
 			$this->CI->load->helper('url');
-			$data['site_title'] = "Gentellela Alela!";
+			$data['page_title'] = "Gentellela Alela!";
 			$this->CI->load->view('admin/sidebar-content',$data);
 			$this->CI->load->view('admin/header', $data);
 			$this->CI->load->view('admin/content', $data);
