@@ -13,15 +13,15 @@
                     <span class=" fa fa-angle-down"></span>
                   </a>
                   <ul class="dropdown-menu dropdown-usermenu pull-right">
-                    <li><a href="<?php echo base_url().'admin/user_profile'?>"> Profile</a></li>
+                    <li><a href="<?php echo base_url().'admin/user_profile'?>"><?php echo lang('Profile'); ?></a></li>
                     <li>
                       <a href="javascript:;">
                         <span class="badge bg-red pull-right">50%</span>
-                        <span>Settings</span>
+                        <span><?php echo lang('Settings'); ?></span>
                       </a>
                     </li>
-                    <li><a href="javascript:;">Help</a></li>
-                    <li><a href="<?php echo base_url().'admin/logout'?>"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
+                    <li><a href="javascript:;"><?php echo lang('Help'); ?></a></li>
+                    <li><a href="<?php echo base_url().'admin/logout'?>"><i class="fa fa-sign-out pull-right"></i> <?php echo lang('Log Out'); ?></a></li>
                   </ul>
                 </li>
 

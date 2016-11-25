@@ -32,6 +32,8 @@
 	<link href="<?php echo base_url() . 'assets/vendors/datatables.net-fixedheader-bs/css/fixedHeader.bootstrap.min.css' ?>" rel="stylesheet">
 	<link href="<?php echo base_url() . 'assets/vendors/datatables.net-responsive-bs/css/responsive.bootstrap.min.css' ?>" rel="stylesheet">
     <link href="<?php echo base_url() . 'assets/vendors/datatables.net-scroller-bs/css/scroller.bootstrap.min.css' ?>" rel="stylesheet">
+    
+  
   </head>
 
   <body class="nav-md">
@@ -94,9 +96,9 @@
                       <li><a href="calendar.html">Calendar</a></li>
                     </ul>
                   </li>
-                  <li><a><i class="fa fa-table"></i> <?php echo lang('Tables'); ?> <span class="fa fa-chevron-down"></span></a>
+                  <li><a><i class="fa fa-table"></i> <?php echo lang('User Management'); ?> <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="<?php echo base_url().'admin/users'?>">Users</a></li>
+                      <li><a href="<?php echo base_url().'admin/users'?>"><?php echo lang('Users'); ?></a></li>
                       <li><a href="tables_dynamic.html">Table Dynamic</a></li>
                     </ul>
                   </li>

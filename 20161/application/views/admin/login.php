@@ -32,11 +32,11 @@
           <section class="login_content">
 			<?php echo form_open('admin/login'); ?>
               <h1>Login Form</h1>
-              <div>
+              <div class="<?php if(form_error('username')!= "") echo 'text-danger'; ?>">
                 <input type="text" name="username" class="form-control" placeholder="Username*" />
-				<p class="text-danger"><?php echo form_error('username'); ?></p>
+				<?php echo form_error('username'); ?>
               </div>
-              <div>
+              <div class="<?php if(form_error('password')!= "") echo 'text-danger'; ?>">
                 <input type="password" name="password" class="form-control" placeholder="Password*" />
 				<?php echo form_error('password'); ?>
               </div>

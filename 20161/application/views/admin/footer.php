@@ -8,8 +8,7 @@
         <!-- /footer content -->
       </div>
     </div>
-
-    <!-- jQuery -->
+	<!-- jQuery -->
     
     <script src="<?php echo base_url() . 'assets/vendors/jquery/dist/jquery.min.js' ?>"></script>
     <!-- Bootstrap -->
@@ -66,7 +65,6 @@
 	<script src="<?php echo base_url() . 'assets/vendors/jszip/dist/jszip.min.js' ?>"></script>
 	<script src="<?php echo base_url() . 'assets/vendors/pdfmake/build/pdfmake.min.js' ?>"></script>
 	<script src="<?php echo base_url() . 'assets/vendors/pdfmake/build/vfs_fonts.js' ?>"></script>
-    <!-- Flot -->
     <script>
       $(document).ready(function() {
         var data1 = [
@@ -325,13 +323,5 @@
       gauge.setTextField(document.getElementById("gauge-text"));
     </script>
     <!-- /gauge.js -->
-	
-  <!-- Datatables -->
-    <script>
-      $(document).ready(function() {
-		 $("#users-list").dataTable();
-      });
-    </script>
-    <!-- /Datatables -->
   </body>
 </html>

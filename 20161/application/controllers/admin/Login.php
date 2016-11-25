@@ -42,7 +42,7 @@ class Login extends Backend_Contoller {
 			$this->db->where('username', $username);
 			$this->db->where('password', md5($password));
 			$query = $this->db->get('users');
-			$data['page_title'] = "Gentellela Alela! |";
+			$data['page_title'] = "Gentellela Alela! | Login";
 			
 			// Store the login user data into the session variable start //
 			$user_temp_data = $query->result();
@@ -65,7 +65,7 @@ class Login extends Backend_Contoller {
 			if(!$this->form_validation->run() == TRUE)
 			{
 				// Form validation fails
-				$this->load->view('admin/login');
+				$this->load->view('admin/login',$data);
 			}
 			else
 			{
@@ -145,12 +145,10 @@ class Login extends Backend_Contoller {
 		$this->form_validation->set_rules('email', 'Email', 'trim|required|valid_email'.$is_unique);
 		// Unique Email Validation End //
 		
-		$this->form_validation->set_rules('password', 'Password', 'trim|required');
-		
 		// Edit functionality
 		 if ($this->input->server('REQUEST_METHOD') === 'POST')
 		 { 	
-				if(!$this->form_validation->run() == TRUE)
+				if($this->form_validation->run() == TRUE)
 				{
 					$new_user_data = array(
 								'first_name' => $this->input->post('first_name'),
@@ -159,7 +157,10 @@ class Login extends Backend_Contoller {
 								'email' => $this->input->post('email')
 					);
 					$this->login_model->update_profile($id, $new_user_data);
+					$this->session->set_flashdata('success', 'Admin Profile Updated Successfully');
+					redirect('admin/user_profile');
 				}
+				
 				
 		 }
 		//get user details to display in the user profile page
