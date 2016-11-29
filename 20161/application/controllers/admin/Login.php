@@ -125,7 +125,9 @@ class Login extends Backend_Contoller {
 	public function user_profile($id = 0)
     {
 		$id = $this->session->userdata['id'];
-        //form validation 
+        //form validation
+		$this->form_validation->set_rules('first_name', 'First Name', 'trim|required');
+        $this->form_validation->set_rules('last_name', 'Last Name', 'trim|required');
         $this->form_validation->set_rules('username', 'Username', 'trim|required');
 		
 		// Unique Email Validation Start // 

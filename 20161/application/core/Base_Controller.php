@@ -9,16 +9,16 @@
 			$this->load->database();
 			
 			// Site Multi Languages
-			if(isset($_GET['lang']) && !empty($_GET['lang'] == 'french')){
+			if(isset($_GET['lang']) && !empty($_GET['lang'] == 'fr')){
 				
-				$this->sessionLang = 'french';
+				$this->sessionLang = 'fr';
 			}
-			else if(isset($_GET['lang']) && !empty($_GET['lang'] == 'german')){
+			else if(isset($_GET['lang']) && !empty($_GET['lang'] == 'de')){
 				
-				$this->sessionLang = 'german';
+				$this->sessionLang = 'de';
 			}
 			else{
-				$this->sessionLang = 'english';
+				$this->sessionLang = 'en';
 			}
 		}
 

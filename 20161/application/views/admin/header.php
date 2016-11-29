@@ -93,9 +93,9 @@
 				   <ul class="">
 					<select onchange="javascript:window.location.href='<?php echo current_url(); ?>?lang='+this.value;">
 					  <option value="" selected>Site Languages</option>
-					  <option value="english">English</option>
-					  <option value="french">French</option>
-					  <option value="german">German</option>
+					  <option value="en">English</option>
+					  <option value="fr">French</option>
+					  <option value="gr">German</option>
 					</select>
 				   </ul>
                 </li>

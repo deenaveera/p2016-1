@@ -55,6 +55,7 @@ $route['admin/register'] = "admin/login/register";
 $route['admin/logout'] = "admin/login/logout";
 $route['admin/user_profile'] = "admin/login/user_profile";
 $route['admin/users'] = "admin/user/index";
+$route['admin'] = "admin/login/login";
 $route['admin/(:any)'] = "admin/$1";
 $route['default_controller'] = 'admin';
 $route['404_override'] = '';

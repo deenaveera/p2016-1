@@ -17,17 +17,21 @@
 					<?php echo form_open('admin/user_profile',array('class' => 'form-horizontal form-label-left')); ?>
 					  <div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first_name"><?php echo lang('First Name'); ?>
+						<span class="required">*</span>
                         </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
+                        <div class="col-md-6 col-sm-6 col-xs-12 <?php if(form_error('first_name')!= "") echo 'text-danger'; ?>">
                           <input type="text" name="first_name" id="first_name" value="<?php echo !empty($users) ? $users[0]['first_name'] : '' ?>" class="form-control col-md-7 col-xs-12">
+						   <?php echo form_error('first_name'); ?>
                         </div>
                       </div>
 					  
 					  <div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last_name"><?php echo lang('Last Name'); ?>
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
+                        <span class="required">*</span>
+						</label>
+                        <div class="col-md-6 col-sm-6 col-xs-12 <?php if(form_error('last_name')!= "") echo 'text-danger'; ?>">
                           <input type="text" name="last_name" id="last_name" value="<?php echo !empty($users) ? $users[0]['last_name'] : '' ?>" class="form-control col-md-7 col-xs-12">
+						  <?php echo form_error('last_name'); ?>
                         </div>
                       </div>
 					  

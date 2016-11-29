@@ -13,6 +13,7 @@
 					<?php //echo form_open('admin/user/add_edit_user/',array('class' => 'form-horizontal form-label-left')); ?>
 					  <div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first_name"><?php echo lang('First Name'); ?>
+						<span class="required">*</span>
                         </label>
 						<?php  
                              $value = "";
@@ -21,13 +22,15 @@
                                     $value = $users['first_name'];
                              }
                         ?>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
+                        <div class="col-md-6 col-sm-6 col-xs-12 <?php if(form_error('first_name')!= "") echo 'text-danger'; ?>">
                           <input type="text" name="first_name" id="first_name" value="<?php echo $value; ?>" class="form-control col-md-7 col-xs-12">
+						  <?php echo form_error('first_name'); ?>
                         </div>
                       </div>
 					  
 					  <div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last_name"><?php echo lang('Last Name'); ?>
+						<span class="required">*</span>
                         </label>
 						<?php  
                              $value = "";
@@ -36,8 +39,9 @@
                                     $value = $users['last_name'];
                              }
                         ?>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
+                        <div class="col-md-6 col-sm-6 col-xs-12 <?php if(form_error('last_name')!= "") echo 'text-danger'; ?>">
                           <input type="text" name="last_name" id="last_name" value="<?php echo $value; ?>" class="form-control col-md-7 col-xs-12">
+						  <?php echo form_error('last_name'); ?>
                         </div>
                       </div>
 					  
@@ -71,21 +75,7 @@
 						  <?php echo form_error('email'); ?>
                         </div>
                       </div>
-					  <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="email"><?php echo lang('Password'); ?> <span class="required">*</span>
-                        </label>
-						<?php  
-                             $value = "";
-                             $value = set_value('password');
-                             if (isset($users['password'])) {
-                                    $value = $users['password'];
-                             }
-                        ?>
-                        <div class="col-md-6 col-sm-6 col-xs-12 <?php if(form_error('password')!= "") echo 'text-danger'; ?>">
-                          <input type="password" name="password" id="password" value="<?php echo $value; ?>" class="form-control col-md-7 col-xs-12">
-						  <?php echo form_error('password'); ?>
-                        </div>
-                      </div>
+					  
                       <div class="ln_solid"></div>
                       <div class="form-group">
                         <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
