@@ -1,16 +1,26 @@
 <div class="right_col" role="main">
 	<div class="page-title">
         <div class="title_left">
-            <h3><?php echo 'Add/Edit User'; ?></h3>
+			<?php
+			  if(isset($users['id']) && !empty($users['id'])){ ?>
+              <h3><?php echo 'Edit User'; ?></h3>
+			<?php } else { ?>
+			  <h3><?php echo 'Add User'; ?></h3>
+			<?php } ?>
         </div>
     </div>
 <div class="row">
               <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                   <div class="x_content" style="display: block;">
-                    <br>
-					<form action="<?php echo base_url().'admin/user/user_form/'; ?><?php if(isset($users['id'])){ echo $users['id']; } ?>" method="post" class="form-horizontal form-label-left">
-					<?php //echo form_open('admin/user/add_edit_user/',array('class' => 'form-horizontal form-label-left')); ?>
+					<?php
+						if(isset($users['id']) && !empty($users['id'])){
+							$url = base_url().'admin/user/update/'.$users['id'];
+						}else{
+							$url = base_url().'admin/user/insert/';
+						}
+					?>
+					<form action="<?php echo $url; ?>" method="post" class="form-horizontal form-label-left">
 					  <div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first_name"><?php echo lang('First Name'); ?>
 						<span class="required">*</span>

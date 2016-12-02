@@ -20,7 +20,7 @@
 						<span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12 <?php if(form_error('first_name')!= "") echo 'text-danger'; ?>">
-                          <input type="text" name="first_name" id="first_name" value="<?php echo !empty($users) ? $users[0]['first_name'] : '' ?>" class="form-control col-md-7 col-xs-12">
+                          <input type="text" name="first_name" id="first_name" value="<?php echo !empty($users) ? $users['first_name'] : '' ?>" class="form-control col-md-7 col-xs-12">
 						   <?php echo form_error('first_name'); ?>
                         </div>
                       </div>
@@ -30,7 +30,7 @@
                         <span class="required">*</span>
 						</label>
                         <div class="col-md-6 col-sm-6 col-xs-12 <?php if(form_error('last_name')!= "") echo 'text-danger'; ?>">
-                          <input type="text" name="last_name" id="last_name" value="<?php echo !empty($users) ? $users[0]['last_name'] : '' ?>" class="form-control col-md-7 col-xs-12">
+                          <input type="text" name="last_name" id="last_name" value="<?php echo !empty($users) ? $users['last_name'] : '' ?>" class="form-control col-md-7 col-xs-12">
 						  <?php echo form_error('last_name'); ?>
                         </div>
                       </div>
@@ -39,7 +39,7 @@
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="username"><?php echo lang('Username'); ?> <span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12 <?php if(form_error('username')!= "") echo 'text-danger'; ?>">
-                          <input type="text" name="username" id="username" value="<?php echo !empty($users) ? $users[0]['username'] : '' ?>" class="form-control col-md-7 col-xs-12">
+                          <input type="text" name="username" id="username" value="<?php echo !empty($users) ? $users['username'] : '' ?>" class="form-control col-md-7 col-xs-12">
 						  <?php echo form_error('username'); ?>
                         </div>
                       </div>
@@ -47,7 +47,7 @@
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="email"><?php echo lang('Email'); ?> <span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12 <?php if(form_error('email')!= "") echo 'text-danger'; ?>">
-                          <input type="text" name="email" id="email" value="<?php echo !empty($users) ? $users[0]['email'] : '' ?>" class="form-control col-md-7 col-xs-12">
+                          <input type="text" name="email" id="email" value="<?php echo !empty($users) ? $users['email'] : '' ?>" class="form-control col-md-7 col-xs-12">
 						  <?php echo form_error('email'); ?>
                         </div>
                       </div>

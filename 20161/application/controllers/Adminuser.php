@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Site extends Frontend_Contoller {
+class Adminuser extends Frontend_Contoller {
 	
 	function __construct() {
         parent::__construct();
@@ -9,15 +9,17 @@ class Site extends Frontend_Contoller {
 	
 	public function index()
 	{
-		exit('1');
+		exit('123');
 		$this->load_frontend_template();
 	}
 	public function add()
-	{exit('2');
+	{
+		exit('ADD');
 		$this->load_frontend_template();
 	}
 	public function edit()
-	{exit('3');
+	{
+		exit('edit');
 		$this->load_frontend_template();
 	}
 }

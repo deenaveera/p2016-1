@@ -1,8 +1,7 @@
 <?php
 if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class template 
-    {
+class template {
         var $CI;
          
         function __construct() 

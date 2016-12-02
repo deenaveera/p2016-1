@@ -12,7 +12,7 @@
         </div>
 		 <div class="title_right">
                 <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right">
-				<a href="<?php echo base_url().'admin/user/create'; ?>">
+				<a href="<?php echo base_url().'admin/user/insert'; ?>">
 				  <i class="fa fa-user">&nbsp;&nbsp;<?php echo lang('Add User'); ?></i> 
 				</a>
                 </div>
@@ -42,8 +42,9 @@
 									<td><?php echo $users_data['username']; ?></td>
 									<td><?php echo $users_data['email']; ?></td>
 									<td>
-										<a href="<?php echo base_url('admin/user/edit/'.$users_data['id']); ?>"><span class="glyphicon glyphicon-edit" aria-hidden="true"> <?php echo lang('Edit'); ?></span></a>&nbsp;&nbsp;
-										<a href="<?php echo base_url('admin/user/delete/'.$users_data['id']); ?>" onClick="return confirm('Are you sure you want to delete this user?')"><span class="glyphicon glyphicon-trash" aria-hidden="true"> <?php echo lang('Delete'); ?></span></a>
+										<a title="<?php echo lang('Edit'); ?>" href="<?php echo base_url('admin/user/update/'.$users_data['id']); ?>"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></a>&nbsp;&nbsp;
+										
+										<a title="<?php echo lang('Delete'); ?>" href="<?php echo base_url('admin/user/delete/'.$users_data['id']); ?>" onClick="return confirm('Are you sure you want to delete this user?')"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>
 									</td>
 								</tr>
 						

@@ -80,7 +80,7 @@ $db['default'] = array(
 	'password' => '',
 	'database' => 'lottary_bond',
 	'dbdriver' => 'mysqli',
-	'dbprefix' => '',
+	'dbprefix' => 'lb_',
 	'pconnect' => FALSE,
 	'db_debug' => (ENVIRONMENT !== 'production'),
 	'cache_on' => FALSE,
